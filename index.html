@@ -3,7 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="תוכניות לימודים חדשניות המשלבות משחקי וידאו בכיתת הלימוד - אגף מחקר ופיתוח, מינהל חדשנות וטכנולוגיה, משרד החינוך">
     <title>גיימינג בחינוך - תוכניות לימודים</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="logo.jpeg">
+    <link rel="apple-touch-icon" href="logo.jpeg">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shlomn01.github.io/GamingLessonPlans/">
+    <meta property="og:title" content="גיימינג בחינוך - תוכניות לימודים">
+    <meta property="og:description" content="תוכניות לימודים חדשניות המשלבות משחקי וידאו בכיתת הלימוד - אגף מחקר ופיתוח, מינהל חדשנות וטכנולוגיה, משרד החינוך">
+    <meta property="og:image" content="https://shlomn01.github.io/GamingLessonPlans/preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="he_IL">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://shlomn01.github.io/GamingLessonPlans/">
+    <meta name="twitter:title" content="גיימינג בחינוך - תוכניות לימודים">
+    <meta name="twitter:description" content="תוכניות לימודים חדשניות המשלבות משחקי וידאו בכיתת הלימוד - משרד החינוך">
+    <meta name="twitter:image" content="https://shlomn01.github.io/GamingLessonPlans/preview.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -214,6 +237,51 @@
             font-size: 0.85rem;
             color: var(--text-muted);
             margin-top: 4px;
+        }
+
+        /* Hero Logo */
+        .hero-logo {
+            width: 200px;
+            height: auto;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 40px rgba(0, 229, 255, 0.25), 0 8px 32px rgba(0, 0, 0, 0.4);
+            animation: logoFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Search Engine Link */
+        .search-engine-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 32px;
+            padding: 16px 36px;
+            background: linear-gradient(135deg, rgba(224, 64, 251, 0.15), rgba(0, 229, 255, 0.15));
+            border: 1px solid rgba(224, 64, 251, 0.4);
+            border-radius: 50px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .search-engine-link:hover {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            border-color: transparent;
+            box-shadow: 0 0 30px rgba(224, 64, 251, 0.4), 0 0 60px rgba(0, 229, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .search-engine-link svg {
+            width: 22px;
+            height: 22px;
         }
 
         /* Divider */
@@ -551,6 +619,7 @@
 
 <!-- Hero Section -->
 <header class="hero">
+    <img src="logo.jpeg" alt="גיימינג בחינוך - Level Up" class="hero-logo">
     <div class="hero-badge">משרד החינוך | מינהל חדשנות וטכנולוגיה</div>
     <h1>גיימינג בחינוך</h1>
     <p class="hero-subtitle">
@@ -571,6 +640,10 @@
             <span class="stat-label">משחקים שונים</span>
         </div>
     </div>
+    <a href="https://shlomn01.github.io/gaming-learning-engine/" class="search-engine-link" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        מנוע חיפוש משחקים לפי כשירויות
+    </a>
 </header>
 
 <div class="divider"></div>
